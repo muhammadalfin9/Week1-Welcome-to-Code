@@ -3,15 +3,16 @@
 //   Function akan me-return true jika jumlah karakter x sama dengan jumlah karakter o, dan false jika tidak.
 
 function xo(str) {
-  var X = 'x';
-  var O = 'o';
-  for(let i = 0; i < 100; i++){
-    if (X[i] == O[i]){
-      return true;
-    }else{
-      return false;
+  var X = 0;
+  var O = 0;
+  for(let i = 0; i < str.length; i++){
+    if (str[i] === 'x'){
+      X++;
+    }else if(str[i] === 'o'){
+      O++;
     }
   }
+  return X === O;
 }
   
 // TEST CASES
